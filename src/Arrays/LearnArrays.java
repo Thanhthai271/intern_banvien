@@ -6,18 +6,6 @@ public class LearnArrays {
 
 //        bài 1:  in ra các phần tử trùng nhau trong mảng
 
-//    public static int[] getElementSame(int[] a) {
-//        for (int i = 0; i < a.length; i++) {
-//            for (int j = i + 1; j < a.length; j++) {
-//                if (a[i] == a[j]) {
-//
-//
-//                }
-//            }
-//        }
-//    return a;
-//    }
-
     public static int[] getElementSame(int[] a) {
         int[] result = new int[a.length]; // Khởi tạo mảng mới
         int count = 0; // Biến đếm số lượng phần tử giống nhau
