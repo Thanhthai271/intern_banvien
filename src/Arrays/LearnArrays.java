@@ -34,7 +34,16 @@ public class LearnArrays {
         int [] result = getElementSame(new int[]{1, 2, 3, 4, 2, 7, 8, 8, 3});
         System.out.println("Các phần tử trùng nhau ở trong mảng là : " + Arrays.toString(result));
 
-    }
+        // Tra ve mang co cac phan tu trung nhau la so chan
+        System.out.println("Cac phan tu trung nhau la so chan la : ");
+        for(int i =0 ; i < result.length; i++){
+            if( result[i] % 2 == 0 ){
+                System.out.println(result[i]);
+            }
+        }
+        }
+
+
 
 
 //
