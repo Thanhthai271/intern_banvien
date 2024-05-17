@@ -6,11 +6,12 @@ public class Code {
         return a+b;
     }
     public static void main(String[] args) {
-        Code result = new Code();
-        LearnOOP method = new LearnOOP();
-        method.point = 9;
-        int a = result.sum(9,10);
-        System.out.println("sum = " + (a + method.point) );
+        // Khai báo 1 object
+        LearnOOP thai = new LearnOOP("Hoc Ly Thuyet", "Phai Thuc Hanh"); // Tạo ra đối tượng cụ thể từ class LearnOOP
+//        thai.getTheory = " Hoc ly Thuyet "; //truy cập tới thuộc tính
+//        thai.practice = " Phai Thuc Hanh "; //Object.thuộc tính và gán giá trị cho thuộc tính
 
+        System.out.println("Để học giỏi thì " + thai.GetgetTheory() + " và " + thai.Getpractice() );
+        // Đây là cách sử dụng method từ class
     }
 }
