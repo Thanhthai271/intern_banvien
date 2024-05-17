@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LearnArrayList {
-    public static void main(String[] args) {
 
+    public static ArrayList<Integer> createIntergerList(){
         // Khởi tạo một ArrayList để lưu trữ các số nguyên
         ArrayList<Integer> numbers = new ArrayList<>();
 
@@ -13,20 +13,26 @@ public class LearnArrayList {
         numbers.add(10);
         numbers.add(20);
         numbers.add(30);
+        return numbers;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> intergerlist = createIntergerList();
+        System.out.println("Danh sách các số nguyên là : " + intergerlist);
 
         // Hiển thị các phần tử trong ArrayList
-        System.out.println("Các phần tử trong ArrayList:");
-        for (int i = 0; i < numbers.size(); i++) {
-            System.out.println(numbers.get(i));
-        }
+//        System.out.println("Các phần tử trong ArrayList:");
+//        for (int i = 0; i < numbers.size(); i++) {
+//            System.out.println(numbers.get(i));
+//        }
 
-        // Xóa một phần tử từ ArrayList
-        numbers.remove(1);
-
-        // Hiển thị lại các phần tử sau khi xóa
-        System.out.println("Các phần tử sau khi xóa:");
-        for (int number : numbers) {
-            System.out.println(number);
+//        // Xóa một phần tử từ ArrayList
+//        numbers.remove(1);
+//
+//        // Hiển thị lại các phần tử sau khi xóa
+//        System.out.println("Các phần tử sau khi xóa:");
+//        for (int number : numbers) {
+//            System.out.println(number);
         }
 
 //        Scanner scanner = new Scanner(System.in);
@@ -51,4 +57,4 @@ public class LearnArrayList {
 //        }
 //        System.out.println("Tổng các số là : " + sum);
     }
-}
+
