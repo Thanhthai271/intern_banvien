@@ -6,6 +6,11 @@ public class LearnString {
   private String name;
   private String id;
 
+  @Override
+  public String toString(){
+      return "LearnString [name =" + name + ", id = " + id + "]";
+  }
+
     public LearnString (String name, String id){
         this.name = name;
         this.id = id;
@@ -34,6 +39,12 @@ public class LearnString {
         stList.add(st5);
 
         System.out.println("Student List : " + stList);
+
+        for (int i = 0; i < stList.size(); i++){
+            if(stList.get(i).getName().startsWith("Thai")){
+                System.out.println("Star with Thai : " + stList.get(i));
+            }
+        }
 
     }
     }
