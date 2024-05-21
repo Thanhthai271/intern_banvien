@@ -1,12 +1,9 @@
-package Arrays;
+package date20240521;
 
 import java.util.Scanner;
 
-public class date20240521 {
-
-//        Viết hàm tìm giá trị lớn nhất trong mảng 1 chiều các số thực
-
-        public static int greatestValue (int [] a) {
+public class baitap5 {
+    public static int greatestValue (int [] a) {
             int max = 0;
             for (int i = 0; i < a.length; i++) {
                 max = Math.max(max, a[i]);
@@ -15,6 +12,7 @@ public class date20240521 {
         }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap vao do dai cua mang : ");
         int n = scanner.nextInt();
@@ -26,5 +24,4 @@ public class date20240521 {
         int max = greatestValue(arr);
         System.out.println("Gia tri lon nhat trong mang la : " + max );
     }
-    }
-
+}
