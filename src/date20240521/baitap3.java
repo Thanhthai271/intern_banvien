@@ -26,42 +26,65 @@ public class baitap3 {
         return temp;
     }
 
-    public static int[] arrange(int[] a) {
-
-//        Danh sách các số hoàn thiện và các số khác
-        int[] perfectNumber = new int[a.length];
-        int[] otherNumber = new int[a.length];
-
-// Tách các số hoàn thiện và các số khác vào hai danh sách
-        for (int i = 0; i < a.length; i++) {
-            if (sumUC(a[i]) == a[i]) {
-                perfectNumber[i] = a[i];
-            } else {
-                otherNumber[i] = a[i];
+    public static int[] perfectNumbers(int[] arr) {
+        int[] perfectNumber = new int[arr.length];
+        int count = 0;
+        // Tách các số hoàn thiện và các số khác vào hai danh sách
+        for (int i = 0; i < arr.length; i++) {
+            if (sumUC(arr[i]) == arr[i]) {
+                perfectNumber[count] = arr[i];
+                count++;
             }
         }
 
-        // Sắp xếp số hoàn thiện giảm dần 0 1
-        for (int i = 0; i < perfectNumber.length - 1; i++) {
-            for (int j = i + 1; j < perfectNumber.length; j++) {
-                if (perfectNumber[i] < perfectNumber[j]) {
-                    int temp1 = perfectNumber[i];
-                    perfectNumber[i] = perfectNumber[j];
-                    perfectNumber[j] = temp1;
+        // tạo ra phần tử mới gồm những giá trị của so hoan hao
+        int[] newperfectNumber = new int[count];
+        for (int i = 0; i < perfectNumber.length; i++) {
+            if (perfectNumber[i] > 0) {
+                newperfectNumber[i] = perfectNumber[i];
+            }
+
+        }
+
+        return newperfectNumber;
+    }
+
+    public static void sapxep(int[] perfectNumbers) {
+        // Sắp xếp số hoàn thiện giảm dần
+        for (int i = 0; i < perfectNumbers.length - 1; i++) {
+            for (int j = i + 1; j < perfectNumbers.length; j++) {
+                if (perfectNumbers[i] < perfectNumbers[j]) {
+                    int temp1 = perfectNumbers[i];
+                    perfectNumbers[i] = perfectNumbers[j];
+                    perfectNumbers[j] = temp1;
                 }
             }
         }
+    }
 
-//        Đặt lại các số hoàn thiện vào vị trí của chúng trong mảng ban đầu
+    public static void setupPerfectNumberReturn(int[] arr,int [] perferctnumbers) {
+        //        Đặt lại các số hoàn thiện vào vị trí của chúng trong mảng ban đầu
         int perfectIndex = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (sumUC(a[i]) == a[i]) {
-                a[i] = perfectNumber[perfectIndex++];
+        for (int i = 0; i < arr.length; i++) {
+            if (sumUC(arr[i]) == arr[i]) {
+                arr[i] = perferctnumbers[perfectIndex++];
             }
         }
+    }
 
+
+    public static int[] arrange(int[] a) {
+
+        // Danh sách các số hoàn thiện
+        int[] perfectNumber = perfectNumbers(a);
+
+        // Sắp xếp số hoàn thiện giảm dần 0 1
+        sapxep(perfectNumber);
+        // Đặt lại các số hoàn thiện vào vị trí của chúng trong mảng ban đầu
+        setupPerfectNumberReturn(arrange(a), perfectNumber);
         return a;
     }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -78,11 +101,12 @@ public class baitap3 {
             scanner.nextLine();
             System.out.print("Bạn có muốn tiếp tục không ? Y/N ? : ");
             String option = scanner.nextLine();
-            if(option.equals("N") || (option.equals("n"))) {
+            if (option.equals("N") || (option.equals("n"))) {
                 break;
             }
         }
     }
+
 }
 
 
