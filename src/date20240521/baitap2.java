@@ -3,8 +3,7 @@ package date20240521;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class baitap1 {
-    // Sắp xếp lẻ tăng dần nhưng giá trị khác giữ nguyên vị trí
+public class baitap2 {
     public static int [] arrange (int [] a){
         for (int i = 0; i < a.length - 1; i++ ){
             for(int j = i + 1; j < a.length; j++){

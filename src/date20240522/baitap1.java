@@ -1,10 +1,9 @@
-package date20240521;
+package date20240522;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class baitap3 {
+public class baitap1 {
 
 //    Sắp xếp số hoàn thiện giảm dần nhưng giá trị khác giữ nguyên vị trí
 
@@ -62,7 +61,7 @@ public class baitap3 {
         }
     }
 
-    public static void setupPerfectNumberReturn(int[] arr,int [] perferctnumbers) {
+    public static void setupPerfectNumberReturn(int[] arr,int [] perferctnumbers) { // gia tri: 100  trong gia tri [1,2,3,4]
         //        Đặt lại các số hoàn thiện vào vị trí của chúng trong mảng ban đầu
         int perfectIndex = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -73,8 +72,8 @@ public class baitap3 {
     }
 
 
-    public static int[] arrange(int[] a) {
-        int[] firstlist = new int[a.length];
+    public static int[] arrange(int[] a) { // 100
+        int[] firstlist = new int[a.length]; // 200
         for(int i = 0; i < a.length; i++){
             firstlist[i] = a[i];
         }
@@ -84,7 +83,7 @@ public class baitap3 {
         // Sắp xếp số hoàn thiện giảm dần 0 1
         sapxep(perfectNumber);
         // Đặt lại các số hoàn thiện vào vị trí của chúng trong mảng ban đầu
-        setupPerfectNumberReturn(firstlist, perfectNumber);
+        setupPerfectNumberReturn(a, perfectNumber); // 100
         return firstlist;
     }
 
@@ -106,15 +105,11 @@ public class baitap3 {
             String option = scanner.nextLine();
             if (option.equals("N") || (option.equals("n"))) {
                 break;
+
             }
+            System.out.println("in ra mảng" + arr);
         }
     }
 
 }
-
-
-
-
-
-
 
