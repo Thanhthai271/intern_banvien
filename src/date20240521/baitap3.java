@@ -74,15 +74,18 @@ public class baitap3 {
 
 
     public static int[] arrange(int[] a) {
-
+        int[] firstlist = new int[a.length];
+        for(int i = 0; i < a.length; i++){
+            firstlist[i] = a[i];
+        }
         // Danh sách các số hoàn thiện
         int[] perfectNumber = perfectNumbers(a);
 
         // Sắp xếp số hoàn thiện giảm dần 0 1
         sapxep(perfectNumber);
         // Đặt lại các số hoàn thiện vào vị trí của chúng trong mảng ban đầu
-        setupPerfectNumberReturn(arrange(a), perfectNumber);
-        return a;
+        setupPerfectNumberReturn(firstlist, perfectNumber);
+        return firstlist;
     }
 
 
