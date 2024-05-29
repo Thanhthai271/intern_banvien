@@ -17,10 +17,19 @@ public class main {
             mt2.hamxuat();
 
         System.out.println("Cac may sam sung la : ");
-        System.out.println(mt.getMayTinhSamSung());
-        System.out.println(mt1.getMayTinhSamSung());
-        System.out.println(mt2.getMayTinhSamSung());
+//        String[] brr = new String[]{mt.getNhaSanXuat(), mt1.getNhaSanXuat(), mt2.getNhaSanXuat()};
+//        for (int i = 0; i < brr.length; i++){
+            if (mt.getNhaSanXuat().equals("SAMSUNG")){
+                System.out.println(mt.getTenHang());
+            }
+            if (mt1.getNhaSanXuat().equals("SAMSUNG")){
+                System.out.println(mt1.getTenHang());
+            }
+            if (mt2.getNhaSanXuat().equals("SAMSUNG")){
+                System.out.println(mt2.getTenHang());
+            }
 
+        System.out.println("");
         System.out.println("may co gia ban thuc te thap nhat la : " );
         double arr[] = new double[]{mt.tinhGiaBanThucTe(), mt1.tinhGiaBanThucTe(), mt2.tinhGiaBanThucTe()};
         for (int i = 0; i < arr.length - 1; i++) {

@@ -64,11 +64,4 @@ public class MayTinh extends HangHoa{
         return giaThucTe;
     }
 
-    public String getMayTinhSamSung(){
-        String a = "null";
-        if(nhaSanXuat.equals("SAMSUNG")){
-            return getTenHang();
-        }return a;
-    }
-
 }
