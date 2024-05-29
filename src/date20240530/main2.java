@@ -1,4 +1,4 @@
-package date20240529;
+package date20240530;
 
 public class main2 {
     public static void main(String[] args) {

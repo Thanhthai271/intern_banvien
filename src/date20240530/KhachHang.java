@@ -1,8 +1,8 @@
-package date20240529;
+package date20240530;
 
 import java.util.Scanner;
 
-public class KhachHang extends Nguoi{
+public class KhachHang extends Nguoi {
     private int soLuongDichVu;
     private DichVu[] dichVu ;
 
