@@ -39,7 +39,7 @@ public class MayTinh extends HangHoa{
 
     public void hamnhap(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap vap ma hang : ");
+        System.out.println("Nhap vao ma hang : ");
         setMaHang(scanner.nextLine());
         System.out.println("Nhap vao ten hang : ");
         setTenHang(scanner.nextLine());
@@ -52,6 +52,8 @@ public class MayTinh extends HangHoa{
     }
 
     public void hamxuat(){
+        System.out.println("Ma hang : " + this.getMaHang());
+        System.out.println("Ten hang : " + this.getTenHang());
         System.out.println("Nha san xuat : " + this.nhaSanXuat);
         System.out.println("Nam san xuat : " + this.namSanXuat);
         System.out.println("Gia ban niem yet : " + this.giaBanNiemYet);
