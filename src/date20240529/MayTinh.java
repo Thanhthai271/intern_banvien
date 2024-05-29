@@ -6,6 +6,11 @@ public class MayTinh extends HangHoa{
     private String nhaSanXuat;
     private int namSanXuat, giaBanNiemYet;
     public static double tyLeKhuyenMai = 0.5;
+
+    public MayTinh(){
+
+    }
+
     public MayTinh(String maHang, String tenHang, String nhaSanXuat, int namSanXuat, int giaBanNiemYet) {
         super(maHang, tenHang);
         this.nhaSanXuat = nhaSanXuat;

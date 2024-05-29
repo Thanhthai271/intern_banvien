@@ -6,6 +6,9 @@ public class HangHoa {
     private String maHang;
     private String tenHang;
 
+    public HangHoa(){
+    }
+
     public HangHoa (String maHang, String tenHang){
         this.maHang = maHang;
         this.tenHang = tenHang;

@@ -6,13 +6,13 @@ public class main {
         hh.hamnhap();
         hh.hamxuat();
 
-        MayTinh mt = new MayTinh(null,"mt",null,0,0);
+        MayTinh mt = new MayTinh();
             mt.hamnhap();
             mt.hamxuat();
-        MayTinh mt1 = new MayTinh(null,null,null,0,0);
+        MayTinh mt1 = new MayTinh();
             mt1.hamnhap();
             mt1.hamxuat();
-        MayTinh mt2 = new MayTinh(null,null,null,0,0);
+        MayTinh mt2 = new MayTinh();
             mt2.hamnhap();
             mt2.hamxuat();
 
